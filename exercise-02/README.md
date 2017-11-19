@@ -1,3 +1,9 @@
+# Files
+- cnn.py
+    - Standalone CNN for training on the MNISt data set
+- plot.py 
+    - Can be used to generate plots from files in data-out directory.
+
 # Directories
 - report
     - contains the report for this exercise
