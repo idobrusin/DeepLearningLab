@@ -58,7 +58,7 @@ def mnist(datasets_dir='./data'):
     """
     Loads the MNIST data set
     The data set is stored in the 'datasets_dir', if not yet present
-    :param datasets_dir: location for storing the data set 
+    :param datasets_dir: location for storing the data set
     :return: [(train_x, train_y), (valid_x, valid_y), (test_x, test_y)]
     """
     if not os.path.exists(datasets_dir):
@@ -297,9 +297,3 @@ if __name__ == '__main__':
         # Export data to file for plotting
         if data_dir and not silent_mode:
             save_data(data_dir, num_filters, learning_rate, test_accuracy, run_on_cpu, num_variables, num_train_epochs)
-
-            # 0.9848 = 0.001
-
-            # TODO: learning rates: 0.1, 0.01, 0.001, 0.0001
-            # TODO: filter size GPU {8, 16, 32, 64, 128, 256}
-            # TODO: filter size CPU {8, 16, 32, 64}

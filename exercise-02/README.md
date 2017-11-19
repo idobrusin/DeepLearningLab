@@ -17,7 +17,6 @@
         - durations_final contains the values relevant for the second experiment of the exercise.
 
 
-
 # Example Usage
 ## Run (train network)
 ```
