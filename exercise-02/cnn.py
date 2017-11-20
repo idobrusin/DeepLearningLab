@@ -103,9 +103,6 @@ def mnist(datasets_dir='./data'):
     test_y = one_hot(test_y)
     rval = [(train_x, train_y), (valid_x, valid_y), (test_x, test_y)]
     print('... done loading data')
-    print(train_x.shape)
-    print(valid_x.shape)
-    print(test_x.shape)
     return rval
 
 
