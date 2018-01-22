@@ -8,6 +8,9 @@ The train_agent.py script will create Tensorflow logs in data/logs and save the 
 
 See --help options for more parameters.
 
+# Remarks
+The folder _keras_ contains our first attempt for solving the exercise, which didn't work out, as the trained agent was not moving towards the goal state.
+
 # Simple RL Exercise
 This folder contains the coded that you need to get started with the rl exercise.
 
