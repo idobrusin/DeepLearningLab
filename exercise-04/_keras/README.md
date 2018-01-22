@@ -1,3 +1,7 @@
+# INFO
+This folder contains our failed atempt to solve the exercise using keras.
+Although the code works, the resulting network is not able to move to the goal state during testing / evaluation.
+
 # Simple RL Exercise
 This folder contains the coded that you need to get started with the rl exercise.
 
