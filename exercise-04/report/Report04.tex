@@ -7,6 +7,8 @@
 \usepackage{booktabs}
 \usepackage{amsmath}
 
+\DeclareMathOperator*{\argmin}{argmin} 
+
 \begin{document}
 \noindent
 \large\textbf{Deep Learning Course 2017} \hfill \textbf{Ilia Dobrusin} \\
@@ -16,11 +18,11 @@
 \section*{Deep Learning Lab Course 2017 - Exercise 4}
 This assignment consists of two parts: manually simulating Q-learning and implementing Deep Q-learning using Tensorflow. 
 
-\section{ManualD Q-Learning}
+\section{Manual Q-Learning}
 \subsection*{Q-function update rule}
  Update rule for the Q function for any state-action pair:
  \begin{equation*}
-    Q(i, u) = (1 - \gamma) * Q(i, u) + \gamma * (r(i, u) + arg-max_u' Q(j, u'))    
+    Q(i, u) = (1 - \gamma) * Q(i, u) + \gamma * (r(i, u) + \argmin_{u'} Q(j, u'))    
   \end{equation*}
 where $i$ is the initial state, $u$ is the action taken in $i$, $j$ the final state reached from $i$ by action $u$, and $r$ is the reward function.
 
@@ -73,7 +75,7 @@ The agent moved in the environment at random for 1000 steps in order to build a 
 \end{table}
 
 \subsection{Issues during implementation}
-At first, we implemented DQN using Keras, which resulted in suboptimally trained model where the agent would reach state next to goal state without moving to the goal state. In the end, we implemented the network using Tensorflow, which lead to an agent who could reach the goal. The training process in itself is instable in the sence that small changes in the architecture lead to significantly worse results, were the calculated Q-loss explodes to values up to a range of $10^{20}$, while for a successful run the loss in the range between 0 and 20.  \\
+At first, we implemented DQN using Keras, which resulted in suboptimally trained model where the agent would reach state next to goal state without moving to the goal state. In the end, we implemented the network using Tensorflow, which lead to an agent who could reach the goal. The training process in itself is instable in the sence that small changes in the architecture lead to significantly worse results, were the calculated Q-loss explodes to values up to a range of $10^{20}$, while for a successful run the loss is in the range between 0 and 20.  \\
 Our first approach consisted of a target network as described by Wang et al \cite{Wang15}, but due to changing from Keras to Tensorflow we did not reimplement it the final architecture.\\
 In the current state, the architecture is not yielding good results on every run.
 
