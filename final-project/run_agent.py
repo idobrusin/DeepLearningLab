@@ -46,6 +46,7 @@ def handle_cli(args):
 	opt.set_algo(args.algo)
 	opt.steps = args.steps
 	opt.mtype = args.mtype
+	opt.rtype = args.rtype
 	opt.hist_len = args.hlength
 	print('[INFO] Parsed parameters from the Command Line.')
 
