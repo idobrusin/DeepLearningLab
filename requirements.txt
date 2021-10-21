@@ -1,6 +1,6 @@
 alabaster==0.7.10
 appdirs==1.4.3
-Babel==2.5.1
+Babel==2.9.1
 bleach==2.1.1
 Brlapi==0.6.6
 chardet==3.0.4
